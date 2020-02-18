@@ -9,10 +9,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { KanbanRoutingModule } from './kanban-routing.module';
 import { BoardListComponent } from './board-list/board-list.component';
+import { BoardComponent } from './board/board.component';
 
 
 @NgModule({
-  declarations: [BoardListComponent],
+  declarations: [BoardListComponent, BoardComponent],
   imports: [
     CommonModule,
     KanbanRoutingModule,

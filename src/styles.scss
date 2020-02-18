@@ -2,6 +2,11 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+@import '~@angular/material/core/theming/theming';
+// Plus imports for other components in your app.
+// For more information: https://material.angular.io/guide/theming
+
+@import url("https://use.typekit.net/jnq3uxd.css");
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -75,7 +80,7 @@ $custom-orange: (
     )
 
 );
-$firestarter-demo-primary: mat-palette($custom-orange);
+$learning-angular-primary: mat-palette($custom-orange);
 
 $learning-angular-accent: mat-palette($mat-pink, A200, A100, A400);
 
@@ -83,7 +88,7 @@ $learning-angular-accent: mat-palette($mat-pink, A200, A100, A400);
 $learning-angular-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$learning-angular-theme: mat-light-theme($learning-angular-primary, $learning-angular-accent, $learning-angular-warn);
+$learning-angular-theme: mat-dark-theme( $learning-angular-primary, $learning-angular-accent, $learning-angular-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -93,4 +98,10 @@ $learning-angular-theme: mat-light-theme($learning-angular-primary, $learning-an
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Raleway', 'Montserrat', sans-serif; }
+body {
+  margin: 0; font-family: 'Raleway', 'Montserrat', sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ShellComponent } from './shell/shell.component';
+
 
 
 const components = [ShellComponent];
@@ -41,6 +42,7 @@ const modules = [
   exports: [
     ...components,
     ...modules,
-  ]
+  ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SharedModule {}
